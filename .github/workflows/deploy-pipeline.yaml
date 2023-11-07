@@ -50,8 +50,10 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # This token is provided by Actions, you do not need to create your own token
         with:
-          tag_name: v0.0.2
-          release_name: Release v0.0.2
+          tag_name: v0.0.3
+          release_name: Release v0.0.3
+          name: zipped-bundle
+          path: ${{ github.sha }}.zip
           body: |
             Changes in this Release
             - Adedd publish job in GHA
