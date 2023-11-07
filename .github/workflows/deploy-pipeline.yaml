@@ -49,6 +49,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: my-artifacts
+          path: functions/
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
