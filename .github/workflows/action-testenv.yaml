@@ -23,8 +23,8 @@ jobs:
           aws-region: us-east-1
       - name: Run NPM
         run: |
+            npm install gatsby-plugin-s3
             npm ci
             npm test
-            npm install gatsby-plugin-s3
             npm run deploy
 
